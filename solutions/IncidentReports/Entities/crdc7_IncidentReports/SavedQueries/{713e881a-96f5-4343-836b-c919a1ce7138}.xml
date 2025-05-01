@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>1</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{713e881a-96f5-4343-836b-c919a1ce7138}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="crdc7_name" select="1" icon="1" preview="1">
+        <row name="result" id="crdc7_incidentreportsid">
+          <cell name="crdc7_name" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>4</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crdc7_incidentreports">
+          <attribute name="crdc7_incidentreportsid" />
+          <attribute name="crdc7_name" />
+          <attribute name="createdon" />
+          <order attribute="crdc7_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="crdc7_name" operator="like" value="{0}" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Quick Find Active Incident Reports" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>
